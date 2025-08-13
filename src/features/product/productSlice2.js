@@ -7,18 +7,47 @@ const productApi = apiSlice.injectEndpoints({
     getProducts: build.query({
       query: () => ({
         url: "/products",
-        method: "GET"
-      })
+        method: "GET",
+      }),
+      providesTags: ["product"],
     }),
     getProductById: build.query({
       query: (id) => ({
         url: `/products/${id}`,
-        method: "GET"
-      })
-    })
-  })
+        method: "GET",
+      }),
+      providesTags: ["product"],
+    }),
+    createProduct: build.mutation({
+      query: (productData) => ({
+        url: `/products`,
+        method: "POST",
+        body: productData,
+      }),
+      invalidatesTags: ["product"],
+    }),
+    deleteProduct: build.mutation({
+      query: (id) => ({
+        url: `/products/${id}`,
+        method: "DELETE",
+      }),
+      invalidatesTags: ["product"],
+    }),
+    updateProduct: build.mutation({
+      query: ({ id, ...patch }) => ({
+        url: `/products/${id}`,
+        method: "PUT",
+        body: patch,
+      }),
+      invalidatesTags: ["product"],
+    }),
+  }),
 });
 
-export const { useGetProductsQuery, useGetProductByIdQuery } = productApi;
-
-// function getData(enpoint)
+export const {
+  useGetProductsQuery,
+  useGetProductByIdQuery,
+  useCreateProductMutation,
+  useDeleteProductMutation,
+  useUpdateProductMutation,
+} = productApi;

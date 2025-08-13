@@ -45,7 +45,7 @@ export default function NavbarBasic() {
               className="flex items-center gap-2 whitespace-nowrap text-2xl font-semibold dark:text-white"
               to={"/"}
             >
-              <span>ODINN</span>
+              <span>iFruit</span>
             </NavLink>
             {/*<!-- Mobile trigger --> */}
             <button

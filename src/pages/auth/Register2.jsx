@@ -233,7 +233,7 @@ export default function Register2() {
           {isLoading ? "Registering..." : "Register new account"}
         </Button>
         <Button
-          className="w-full mt-2"
+          className="w-full mt-2 bg-zinc-400 dark:bg-zinc-700"
           type="button"
           onClick={() => navigate(-1)}
         >

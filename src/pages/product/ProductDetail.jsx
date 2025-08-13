@@ -1,6 +1,7 @@
 import { useParams } from "react-router";
 import { useGetProductByIdQuery } from "../../features/product/productSlice2";
 import React, { useState } from "react";
+import { Button } from "flowbite-react";
 import { da } from "zod/locales";
 
 const ProductDetail = () => {
@@ -101,12 +102,12 @@ const ProductDetail = () => {
                 />
               </svg>
             </div>
-            <p className="focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-zinc-800 font-normal text-base leading-4 text-zinc-700 hover:underline hover:text-zinc-800 duration-100 cursor-pointer">
+            <p className=" text-zinc-800 dark:text-zinc-200 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-zinc-800 font-normal text-base leading-4 text-zinc-700 hover:underline hover:text-zinc-800 duration-100 cursor-pointer">
               22 reviews
             </p>
           </div>
 
-          <p className=" font-normal text-base leading-6 text-zinc-600 dark:text-zinc-300 mt-7">
+          <p className=" font-normal text-base leading-6 text-zinc-600 dark:text-zinc-200 mt-7">
             {data?.description}
           </p>
           <p className="text-primary-600 font-semibold lg:text-2xl text-xl lg:leading-6 leading-5 mt-6 ">
@@ -115,35 +116,35 @@ const ProductDetail = () => {
 
           <div className="lg:mt-11 mt-10">
             <div className="flex flex-row justify-between">
-              <p className=" font-medium text-base leading-4 text-zinc-600">
+              <p className=" font-medium text-base leading-4 text-zinc-600 dark:text-zinc-200">
                 Select quantity
               </p>
               <div className="flex">
                 <span
                   onClick={minusCount}
-                  className="focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-zinc-800 cursor-pointer border border-zinc-300 border-r-0 w-7 h-7 flex items-center justify-center pb-1"
+                  className="dark:border-zinc-500 dark:text-zinc-200 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-zinc-800 cursor-pointer border border-zinc-300 border-r-0 w-7 h-7 flex items-center justify-center pb-1"
                 >
                   -
                 </span>
                 <input
                   id="counter"
                   aria-label="input"
-                  className="border border-zinc-300 h-full text-center w-14 pb-1"
+                  className="border border-zinc-300 dark:border-zinc-500 dark:text-zinc-200 h-full text-center w-14 pb-1"
                   type="text"
                   value={count}
                   onChange={(e) => e.target.value}
                 />
                 <span
                   onClick={addCount}
-                  className="focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-zinc-800 cursor-pointer border border-zinc-300 border-l-0 w-7 h-7 flex items-center justify-center pb-1 "
+                  className="dark:border-zinc-500 dark:text-zinc-200 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-zinc-800 cursor-pointer border border-zinc-300 border-l-0 w-7 h-7 flex items-center justify-center pb-1 "
                 >
                   +
                 </span>
               </div>
             </div>
-            <hr className=" bg-zinc-200 w-full my-2" />
+            <hr className=" bg-zinc-200 dark:text-zinc-600 w-full my-2" />
             <div className=" flex flex-row justify-between items-center mt-4">
-              <p className="font-medium text-base leading-4 text-zinc-600">
+              <p className="font-medium text-base leading-4 text-zinc-600 dark:text-zinc-200">
                 Dimensions
               </p>
               <svg
@@ -168,12 +169,12 @@ const ProductDetail = () => {
                 />
               </svg>
             </div>
-            <hr className=" bg-zinc-200 w-full mt-4" />
+            <hr className=" bg-zinc-200 dark:text-zinc-600 w-full mt-4" />
           </div>
 
-          <button className="focus:outline-none focus:ring-2 hover:bg-black focus:ring-offset-2 focus:ring-zinc-800 font-medium text-base leading-4 text-white bg-zinc-800 w-full py-5 lg:mt-12 mt-6">
+          <Button className="active:outline-none focus:ring-2  active:ring-offset-2  font-medium text-base leading-4 w-full py-5 lg:mt-12 mt-6">
             Add to Card
-          </button>
+          </Button>
         </div>
 
         {/* <!-- Preview Images Div For larger Screen--> */}

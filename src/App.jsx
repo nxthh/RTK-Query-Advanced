@@ -8,7 +8,7 @@ function App() {
 
   return (
     <>
-      <main className="bg-zinc-50 py-8 antialiased dark:bg-zinc-900 md:py-12">
+      <main className=" mt-20 bg-zinc-50 py-8 antialiased dark:bg-zinc-900 md:py-12">
         <div className="mx-auto max-w-screen-xl px-4 2xl:px-0">
           <section className="mb-4 grid gap-4 sm:grid-cols-2 md:mb-8 lg:grid-cols-3 xl:grid-cols-4">
             {isLoading &&

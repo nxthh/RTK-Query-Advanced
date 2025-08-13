@@ -12,6 +12,9 @@ import RootLayout from "./components/layouts/root-layout.jsx";
 import Register from "./pages/auth/Register.jsx";
 import Register2 from "./pages/auth/Register2.jsx";
 import About from "./pages/about/About.jsx";
+import CreateProductPage from "./pages/createProduct/CreateProduct.jsx";
+import EditProductPage from "./pages/editProduct/EditProduct.jsx";
+
 
 createRoot(document.getElementById("root")).render(
   <StrictMode>
@@ -26,6 +29,8 @@ createRoot(document.getElementById("root")).render(
           </Route>
           <Route path="/login" element={<Login />} />
           <Route path="/register" element={<Register2 />} />
+          <Route path="/create-product" element={<CreateProductPage />}/>
+          <Route path="/edit-product/:id" element={<EditProductPage />}/>
         </Routes>
       </BrowserRouter>
     </Provider>

@@ -1,9 +1,13 @@
 import { useGetProductsQuery } from "../../features/product/productSlice2";
 import { NavLink } from "react-router";
 import DataTable from "react-data-table-component";
+import styled from "styled-components";
+import { LuPackagePlus } from "react-icons/lu";
+import { Button } from "flowbite-react";
 
 export default function Product() {
   const { data, isLoading } = useGetProductsQuery();
+
   const columns = [
     {
       name: "Thumbnail",
@@ -44,7 +48,7 @@ export default function Product() {
             aria-current="page"
             aria-haspopup="false"
             className="inline-flex h-[40px] my-5 items-center  text-white rounded-md  bg-emerald-500 transition-colors duration-300 hover:bg-emerald-600 focus:text-emerald-600 focus:outline-none focus-visible:outline-none p-2"
-            to={`/edit/${row.id}`}
+            to={`/edit-product/${row.uuid}`}
           >
             <span>Edit</span>
           </NavLink>
@@ -53,25 +57,56 @@ export default function Product() {
             aria-current="page"
             aria-haspopup="false"
             className="inline-flex h-[40px] my-5 items-center  text-white rounded-md  bg-red-500 transition-colors duration-300 hover:bg-red-600 focus:text-red-600 focus:outline-none focus-visible:outline-none p-2"
-            to={`/delete/${row.id}`}
+            to={`/delete/${row.uuid}`}
           >
-            <span>Delete</span>
+            <span>Delete</span> 
           </NavLink>
         </div>
       ),
     },
   ];
 
+  const customStyles = {
+    rows: {
+      style: {},
+    },
+    headCells: {
+      style: {
+        backgroundColor: "oklch(49.1% 0.27 292.581)", // Green header
+        color: "white",
+      },
+    },
+    cells: {
+      style: {},
+    },
+  };
+
   console.log("data from RTK Query", data);
 
   return (
-    <main className="max-w-screen-xl mx-auto mt-16">
-      <DataTable
-        columns={columns}
-        data={data?.content}
-        pagination
-        progressPending={isLoading}
-      />
-    </main>
+    <>
+      <section className=" mt-25 flex justify-center ">
+        <NavLink to="/create-product">
+          <Button>
+            Create product
+            <LuPackagePlus className=" ml-2" />
+          </Button>
+        </NavLink>
+      </section>
+      <main className="max-w-screen-xl mx-auto mt-20  shadow-lg">
+        <div className="rounded-xl">
+          <DataTable
+          columns={columns}
+          data={data?.content}
+          pagination={styled}
+          progressPending={isLoading}
+          customStyles={customStyles}
+        />
+        </div>
+        <div>
+          
+        </div>
+      </main>
+    </>
   );
 }
