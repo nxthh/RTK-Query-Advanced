@@ -2,7 +2,7 @@ import { useState, useEffect } from "react";
 import { NavLink } from "react-router";
 import { FaSun, FaMoon } from "react-icons/fa";
 
-export default function NavbarBasic() {
+export default function Navbar() {
   const [isToggleOpen, setIsToggleOpen] = useState(false);
   const [theme, setTheme] = useState(() => {
     const savedTheme = localStorage.getItem("theme");

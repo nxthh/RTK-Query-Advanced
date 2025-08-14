@@ -4,6 +4,8 @@ import DataTable from "react-data-table-component";
 import styled from "styled-components";
 import { LuPackagePlus } from "react-icons/lu";
 import { Button } from "flowbite-react";
+import { TbEdit } from "react-icons/tb";
+import { MdDelete } from "react-icons/md";
 
 export default function Product() {
   const { data, isLoading } = useGetProductsQuery();
@@ -27,7 +29,7 @@ export default function Product() {
       selector: (row) => row?.name,
     },
     {
-      name: "Name",
+      name: "Category",
       selector: (row) => row?.category?.name,
     },
     {
@@ -50,7 +52,7 @@ export default function Product() {
             className="inline-flex h-[40px] my-5 items-center  text-white rounded-md  bg-emerald-500 transition-colors duration-300 hover:bg-emerald-600 focus:text-emerald-600 focus:outline-none focus-visible:outline-none p-2"
             to={`/edit-product/${row.uuid}`}
           >
-            <span>Edit</span>
+            <TbEdit />
           </NavLink>
           <NavLink
             role="menuitem"
@@ -59,7 +61,7 @@ export default function Product() {
             className="inline-flex h-[40px] my-5 items-center  text-white rounded-md  bg-red-500 transition-colors duration-300 hover:bg-red-600 focus:text-red-600 focus:outline-none focus-visible:outline-none p-2"
             to={`/delete/${row.uuid}`}
           >
-            <span>Delete</span> 
+           <MdDelete />
           </NavLink>
         </div>
       ),
@@ -94,7 +96,7 @@ export default function Product() {
         </NavLink>
       </section>
       <main className="max-w-screen-xl mx-auto mt-20  shadow-lg">
-        <div className="rounded-xl">
+        <div className="rounded-t-xl">
           <DataTable
           columns={columns}
           data={data?.content}
