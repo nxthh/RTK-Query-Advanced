@@ -9,7 +9,7 @@ export default function About() {
         <div className="py-8 px-4 mx-auto max-w-screen-xl lg:py-16">
           <div className="bg-zinc-50 dark:bg-zinc-800 border border-zinc-200 dark:border-zinc-700 rounded-lg p-8 md:p-12 mb-8">
             <h1 className="text-zinc-900 dark:text-white text-3xl md:text-5xl font-extrabold mb-2">
-              About Ace Shop
+              About iFruit Shop
             </h1>
             <p className="text-lg font-normal text-zinc-500 dark:text-zinc-400 mb-6">
               Your trusted partner in cutting-edge technology solutions since
@@ -28,7 +28,7 @@ export default function About() {
                 Our Story
               </h2>
               <p className="mb-6 font-light text-zinc-500 md:text-lg dark:text-zinc-400">
-                Founded in 2015, Ace Shop began as a small startup with a big
+                Founded in 2015, iFruit Shop began as a small startup with a big
                 vision: to make cutting-edge technology accessible to everyone.
                 What started as a passion project in a garage has grown into a
                 trusted technology retailer serving customers worldwide.
@@ -164,7 +164,7 @@ export default function About() {
         <div className="py-8 px-4 mx-auto max-w-screen-xl lg:py-16">
           <div className="text-center mb-12">
             <h2 className="mb-4 text-4xl tracking-tight font-extrabold text-zinc-900 dark:text-white">
-              Why Choose Ace Shop?
+              Why Choose iFruit Shop?
             </h2>
           </div>
 
@@ -285,10 +285,10 @@ export default function About() {
         <div className="py-8 px-4 mx-auto max-w-screen-xl lg:py-16">
           <div className="bg-zinc-50 dark:bg-zinc-800 border border-zinc-200 dark:border-zinc-700 rounded-lg p-8 md:p-12 text-center">
             <h2 className="mb-4 text-3xl font-extrabold tracking-tight leading-none text-zinc-900 md:text-4xl dark:text-white">
-              Ready to Experience Ace Shop?
+              Ready to Experience iFruit Shop?
             </h2>
             <p className="mb-6 text-lg font-normal text-zinc-500 dark:text-zinc-400">
-              Join thousands of satisfied customers who trust Ace Shop for their
+              Join thousands of satisfied customers who trust iFruit Shop for their
               technology needs.
             </p>
             <div className="flex flex-col sm:flex-row sm:justify-center gap-4">

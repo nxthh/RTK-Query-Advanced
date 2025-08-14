@@ -7,7 +7,7 @@ export default function FooterBasic() {
         <span className="text-sm text-zinc-500 sm:text-center dark:text-zinc-400">
           © 2015{" "}
           <NavLink to="https://flowbite.com/" className="  ">
-            Ace™
+            iFruit™
           </NavLink>
           . All Rights Reserved.
         </span>
